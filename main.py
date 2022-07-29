@@ -76,6 +76,7 @@ def main(username, scope, clientID, clientSecret, redirectURI, path):
                     print('Token expired')
                     spotify = setupSpotifyObject(username, scope, clientID, clientSecret, redirectURI)
                     current_track = spotify.current_user_playing_track()
+                    print('Token renewed')
 
             except (OSError, urllib3.exceptions.HTTPError) as e:
                 print(f"\nSomething went wrong: {e}\n")
