@@ -128,7 +128,7 @@ def main(username, scope, clientID, clientSecret, redirectURI, path):
                         elif choice == '3':
                             sys.exit(0)
                         else:
-                            pass
+                            print("Resuming my business of skipping ads ;)")
                         continue  # Skip the one-second sleep
 
             time.sleep(1)
