@@ -107,9 +107,10 @@ def main(username, scope, clientID, clientSecret, redirectURI, path):
                     except KeyboardInterrupt:
                         print("\n1. Skip track.\n"
                               "2. Want to change playlist/track or pause playback.\n"
-                              "3. Exit this program (enter anything else).\n"
+                              "3. Exit this program .\n"
+                              "4. Don't do anything (anything else works too)\n"
                              )
-                        choice = input("Choose an option (1/2/?): ")
+                        choice = input("Choose an option (1/2/3/?): ")
                         last_track = ""  # In case the track remains the same.
                         if choice == '1':
                             nextTrack()
@@ -124,8 +125,10 @@ def main(username, scope, clientID, clientSecret, redirectURI, path):
                                   "Press ENTER after changing the playlist/track"
                                   " or resuming playback...")
                             print("Resuming my business of skipping ads ;)")
-                        else:
+                        elif choice == '3':
                             sys.exit(0)
+                        else:
+                            pass
                         continue  # Skip the one-second sleep
 
             time.sleep(1)
